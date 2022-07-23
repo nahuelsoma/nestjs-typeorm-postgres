@@ -7,9 +7,9 @@ import {
   OneToMany,
 } from 'typeorm';
 
-import { Product } from './product.entity';
+import { Product } from './product.entity'; // to perform a one to many relationship
 
-@Entity()
+@Entity({ name: 'brands' })
 export class Brand {
   @PrimaryGeneratedColumn()
   id: number;

@@ -6,12 +6,12 @@ import {
   Entity,
   OneToMany,
 } from 'typeorm';
+import { Exclude, Expose } from 'class-transformer';
+
 import { Customer } from './customer.entity';
 import { OrderItem } from './order-item.entity';
 
-import { Exclude, Expose } from 'class-transformer';
-
-@Entity()
+@Entity({ name: 'orders' })
 export class Order {
   @PrimaryGeneratedColumn()
   id: number;

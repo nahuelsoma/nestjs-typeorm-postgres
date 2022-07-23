@@ -37,7 +37,7 @@ export class ProductsService {
         where.price = Between(minPrice, maxPrice);
       }
       return this.productRepo.find({
-        relations: ['brand'],
+        relations: ['brand', 'categories'],
         where,
         take: limit,
         skip: offset,
